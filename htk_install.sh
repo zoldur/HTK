@@ -24,7 +24,7 @@ function compile_node() {
   cd $TMP_FOLDER
   wget -q $COIN_REPO >/dev/null 2>&1
   compile_error 
-  unzip htk.zip >/dev/null 2>&1
+  unzip 2.1.0.3.zip >/dev/null 2>&1
   compile_error 
   cp htk* /usr/local/bin
   cd -
