@@ -22,9 +22,9 @@ NC='\033[0m'
 function compile_node() {
   echo -e "Prepare to download $COIN_NAME files"
   cd $TMP_FOLDER
-  wget -q $COIN_REPO >/dev/null 2>&1
+  wget -q $COIN_REPO 
   compile_error 
-  unzip 2.1.0.3.zip >/dev/null 2>&1
+  unzip HTK-2.1.0.3.zip >/dev/null 2>&1
   compile_error 
   cp htk* /usr/local/bin
   cd -
