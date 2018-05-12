@@ -5,7 +5,7 @@ CONFIG_FILE='htk.conf'
 CONFIGFOLDER='/root/.htk'
 COIN_DAEMON='/usr/local/bin/htkd'
 COIN_CLI='/usr/local/bin/htk-cli'
-COIN_REPO='https://github.com/zoldur/HTK/files/1773069/htk.zip'
+COIN_REPO='https://github.com/zoldur/HTK/releases/download/v3.0.0.0/htk.tar.gz'
 COIN_NAME='HTK'
 COIN_PORT=58100
 RPCPORT=58200
@@ -24,9 +24,8 @@ function compile_node() {
   cd $TMP_FOLDER
   wget -q $COIN_REPO 
   compile_error 
-  unzip htk.zip >/dev/null 2>&1
+  tar xvzf htk.tar.gz -C /usr/local/bin >/dev/null 2>&1
   compile_error 
-  cp htk* /usr/local/bin
   cd -
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
